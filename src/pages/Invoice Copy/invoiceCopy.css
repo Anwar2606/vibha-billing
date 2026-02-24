@@ -1,0 +1,174 @@
+/* ======================================================
+   DESKTOP LAYOUT
+====================================================== */
+
+.main-container2 {
+    display: flex;
+    background-color: #f4f7fe;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.all-bills-page {
+    width: 100%;
+    max-width: 950px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+.share-icon {
+    font-size: 18px;
+    color: #1b73e8;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.date-filter {
+    margin-bottom: 20px;
+}
+
+.bills-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bills-table th,
+.bills-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.products-table th,
+.products-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.products-table th {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+
+/* ======================================================
+   📱 MOBILE (MAX 768px)
+====================================================== */
+
+@media (max-width: 768px) {
+
+    /* Hide Sidebar */
+    .sidebar {
+        display: none !important;
+    }
+
+    /* Stack layout */
+    .main-container2 {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* Fix content alignment */
+    .content {
+        width: 100%;
+        padding: 10px;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    /* Mobile Top Navbar */
+
+
+    /* FIXED — Remove wrong left / right offsets */
+    .all-bills-page {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px;
+        margin: 10px auto;
+        border-radius: 6px;
+        box-shadow: none;
+
+        /* important fix */
+        position: static !important;
+        left: 0 !important;
+        right: 0 !important;
+        top: 0 !important;
+        bottom: 0 !important;
+    }
+
+    /* Mobile Heading */
+    h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* Tables responsive */
+    .products-table,
+    .bills-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .products-table th,
+    .products-table td,
+    .bills-table th,
+    .bills-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+/* ======================================================
+   📱 EXTRA SMALL (MAX 480px)
+====================================================== */
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .products-table td,
+    .products-table th {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+}

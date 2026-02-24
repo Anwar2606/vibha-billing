@@ -1,0 +1,157 @@
+/* ======================================
+   🖥️ FULL SCREEN AUTH PAGE
+====================================== */
+.auth-screen {
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url('../assets/LoginBack.jpg') center/cover no-repeat;
+  overflow: hidden !important;
+  font-family: "Poppins", sans-serif;
+}
+
+/* LOGO */
+.auth-logo-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.auth-logo {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* ======================================
+   📦 AUTH BOX
+====================================== */
+.auth-box {
+  width: 100%;
+  max-width: 400px;
+
+  padding: 30px 26px;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.auth-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #1a73e8;
+  text-transform: uppercase;
+}
+
+/* SEPARATOR */
+.auth-section-title span {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+/* ======================================
+   🔤 INPUT FIELDS
+====================================== */
+.auth-input-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.auth-input {
+  width: 100%;
+  padding: 12px 12px;
+  font-size: 1rem;
+
+  border: 1px solid #b9c2d1;
+  border-radius: 10px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.auth-label {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  padding: 0 4px;
+  background: white;
+  font-size: 0.85rem;
+  transition: 0.25s ease;
+}
+
+.auth-input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 6px rgba(26, 115, 232, 0.35);
+  outline: none;
+}
+
+.auth-input:focus~.auth-label,
+.auth-input:valid~.auth-label {
+  transform: translateY(-26px) scale(0.85);
+  color: #1a73e8;
+}
+
+/* ======================================
+   🔘 LOGIN BUTTON
+====================================== */
+.auth-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 4px;
+
+  background: linear-gradient(135deg, #1a73e8, #005fe0);
+  border: none;
+  border-radius: 12px;
+
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.auth-btn:hover {
+  background: linear-gradient(135deg, #005fe0, #0047ad);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 90, 255, 0.3);
+}
+
+/* ======================================
+   📱 MOBILE RESPONSIVE
+====================================== */
+@media (max-width: 600px) {
+  .auth-box {
+    max-width: 90%;
+    padding: 22px 18px !important;
+    border-radius: 12px;
+  }
+
+  .auth-title {
+    font-size: 1.3rem;
+  }
+
+  .auth-input {
+    padding: 10px;
+  }
+
+  .auth-btn {
+    padding: 11px;
+  }
+}

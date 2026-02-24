@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/* 🔵 Modal Overlay (background dim effect) */
+/* 🔵 BACKDROP */
+/* =============================
+   MODAL WRAPPER
+============================= */
+/* =============================
+   MODAL BACKDROP
+============================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 40px;
+  z-index: 2000;
+  font-family: "DM Sans", sans-serif;
+  animation: modalFade 0.2s ease-in-out;
+}
+
+/* =============================
+   MODAL BOX
+============================= */
+.modal-content {
+  width: 92%;
+  max-width: 850px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  max-height: 85vh;
+  overflow-y: auto;
+  border: 1px solid #e9e9e9;
+}
+
+/* HEADER */
+.modal-content h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1b2594;
+  text-align: center;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e6e9f3;
+}
+
+/* SECTION TITLES */
+.modal-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 25px 0 12px;
+  color: #242424;
+}
+
+/* FORM LABELS */
+.modal-content label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* GLOBAL INPUT */
+.modal-content input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #cfd8ff;
+  background: #f7f9ff;
+  transition: 0.25s ease;
+  margin-bottom: 14px;
+}
+
+.modal-content input:focus {
+  background: #fff;
+  border-color: #1b2594;
+  box-shadow: 0 0 0 3px rgba(27, 78, 255, 0.12);
+  outline: none;
+}
+
+/* ======================================================
+   ⭐ PRODUCT BLOCK (2 ROW CLEAN PROFESSIONAL DESIGN)
+====================================================== */
+.product-block {
+  background: #fafbff;
+  border: 1px solid #e2e6ff;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ROW 1 → NAME | QTY | PRICE */
+.product-row-top {
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr 0.6fr;
+  gap: 16px;
+  align-items: end;
+}
+
+/* ROW 2 → TOTAL | REMOVE BUTTON */
+.product-row-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/* Total box */
+.total-box {
+  width: 40%;
+}
+
+.total-box input {
+  background: #eef3ff;
+  font-weight: 700;
+}
+
+/* REMOVE BUTTON */
+.remove-btn {
+  background: #ff4757;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  height: fit-content;
+  transition: 0.25s ease;
+}
+
+.remove-btn:hover {
+  background: #d63031;
+}
+
+/* =============================
+   AVAILABLE PRODUCTS TABLE
+============================= */
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.products-table th {
+  background: #1b2594;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.products-table td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.products-table button {
+  background: #1b2594;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  transition: 0.2s;
+  font-weight: 600;
+}
+
+.products-table button:hover {
+  background: #111a6e;
+}
+
+/* =============================
+   ACTION BUTTONS (SAVE/CANCEL)
+============================= */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+  gap: 12px;
+}
+
+.save-btn {
+  background: #28a745;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: #218838;
+}
+
+.cancel-btn {
+  background: #dc3545;
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover {
+  background: #b52b38;
+}
+
+/* =============================
+   SCROLLBAR
+============================= */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 10px;
+}
+
+/* =============================
+   ANIMATION
+============================= */
+@keyframes modalFade {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* =============================
+   ACTION BUTTONS DESIGN
+============================= */
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+/* SAVE BUTTON */
+.save-btn {
+  background: linear-gradient(135deg, #1b8bff, #0051ff);
+  color: white;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 82, 255, 0.25);
+}
+
+.save-btn:hover {
+  background: linear-gradient(135deg, #006aff, #0038cc);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 82, 255, 0.35);
+}
+
+/* CANCEL BUTTON */
+.cancel-btn {
+  background: #ff4757;
+  color: white;
+  padding: 12px 26px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 12px rgba(255, 71, 87, 0.25);
+}
+
+.cancel-btn:hover {
+  background: #d63031;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 71, 87, 0.35);
+}
+
+/* ===========================================
+   📱 MOBILE RESPONSIVE DESIGN
+=========================================== */
+@media (max-width: 768px) {
+
+  /* Modal box becomes full width */
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+    max-height: 90vh;
+    border-radius: 12px;
+  }
+
+  /* Reduce heading sizes */
+  .modal-content h2 {
+    font-size: 18px;
+  }
+
+  .modal-content h3 {
+    font-size: 16px;
+  }
+
+  /* Product block spacing */
+  .product-block {
+    padding: 14px;
+    gap: 14px;
+  }
+
+  /* ----------- PRODUCT ROW 1 (STACK ON MOBILE) ----------- */
+  .product-row-top {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* ----------- PRODUCT ROW 2 (TOTAL + REMOVE) ----------- */
+  .product-row-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .total-box {
+    width: 100%;
+  }
+
+  .remove-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  /* Action buttons spacing */
+  .modal-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .save-btn,
+  .cancel-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  /* Table responsiveness */
+  .products-table {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    /* forces equal-width columns */
+    overflow: hidden;
+    white-space: normal;
+    /* allow text to wrap */
+  }
+
+  .products-table th,
+  .products-table td {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    text-align: left;
+    word-wrap: break-word;
+    /* break long words */
+  }
+
+  /* Make columns auto-fit */
+  .products-table th:nth-child(1),
+  .products-table td:nth-child(1) {
+    width: 45%;
+  }
+
+  .products-table th:nth-child(2),
+  .products-table td:nth-child(2) {
+    width: 30%;
+  }
+
+  .products-table th:nth-child(3),
+  .products-table td:nth-child(3) {
+    width: 25%;
+  }
+
+  /* Modal padding adjustments */
+  .modal {
+    padding-top: 20px;
+  }
+}
+
+
+.main-container2 {
+  display: flex;
+  background-color: #f4f7fe;
+}
+
+.sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.all-bills-page {
+  max-width: 950px;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  position: relative;
+  top: 20px;
+  left: 110px;
+  right: 110px;
+  bottom: 60px;
+
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.date-filter {
+  margin-bottom: 20px;
+}
+
+.bills-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bills-table th,
+.bills-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.bills-table th {
+  background-color: #f4f4f4;
+}
+
+.bills-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.bills-table tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.bills-table tr:last-child {
+  background-color: #d9f7be;
+  /* Color for the last row */
+}
+
+.bills-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.download-icon,
+.delete-icon {
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+  color: green;
+  /* Adds a gap between the icons */
+}
+
+.edit-icon {
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+  color: #1b2594;
+  /* Adds a gap between the icons */
+}
+
+.main-container {
+  display: flex;
+  min-height: 165vh;
+  /* Ensures full height even if content is less */
+  background-color: #f4f7fe;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+  color: #1b2594;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+
+.delete-icon {
+  color: red;
+  margin-right: 0;
+}
+
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.products-table th,
+.products-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.products-table th {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.products-table tr:hover {
+  background-color: #f1f1f1;
+}

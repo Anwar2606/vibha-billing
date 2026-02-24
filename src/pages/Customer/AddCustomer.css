@@ -1,0 +1,259 @@
+/* ================================
+   🌟 NEW MODERN UI DESIGN
+================================ */
+
+/* Main layout */
+.customer-main {
+    display: flex;
+    background: linear-gradient(135deg, #eef2ff, #f7faff);
+    min-height: 100vh;
+}
+
+/* Content aligned next to sidebar */
+.customer-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Elegant Card (Glassmorphism + Soft Shadow) */
+.customer-card {
+    width: 100%;
+    max-width: 520px;
+    background: rgba(255, 255, 255, 0.82);
+    backdrop-filter: blur(10px);
+    padding: 35px 40px;
+    border-radius: 18px;
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08),
+        0 4px 12px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    animation: fadeIn 0.35s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Title */
+.customer-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 700;
+    background: linear-gradient(90deg, #1b2594, #4c6ef5);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Form styling */
+.customer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* Label styling */
+.customer-label {
+    font-size: 15px;
+    font-weight: 600;
+    color: #444;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    letter-spacing: 0.3px;
+}
+
+/* Modern Input Field */
+.customer-input {
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: #f9fbff;
+    border: 2px solid #e2e8ff;
+    font-size: 15px;
+    transition: all 0.25s ease;
+}
+
+.customer-input:focus {
+    border-color: #4c6ef5;
+    box-shadow: 0 0 8px rgba(76, 110, 245, 0.25);
+    background: #fff;
+    outline: none;
+}
+
+/* Button group */
+.customer-btn-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 12px;
+}
+
+/* Button styling */
+.customer-btn {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    border: none;
+    transition: 0.25s ease;
+}
+
+/* Primary button */
+.customer-btn.save {
+    background: linear-gradient(135deg, #1b2594, #4c6ef5);
+    color: white;
+    box-shadow: 0 4px 10px rgba(76, 110, 245, 0.25);
+}
+
+.customer-btn.save:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(76, 110, 245, 0.35);
+}
+
+/* Secondary button */
+.customer-btn.cancel {
+    background-color: #f1f3f9;
+    color: #333;
+}
+
+.customer-btn.cancel:hover {
+    background-color: #e4e7ef;
+    transform: translateY(-2px);
+}
+
+/* ======================================
+   📱 MOBILE RESPONSIVE DESIGN
+====================================== */
+@media (max-width: 768px) {
+    .customer-content {
+        margin-left: 0 !important;
+        padding: 20px;
+    }
+
+    .customer-card {
+        width: 100%;
+        padding: 25px;
+    }
+
+    .customer-title {
+        font-size: 24px;
+    }
+
+    .customer-btn-group {
+        flex-direction: column;
+    }
+
+    .customer-btn {
+        width: 100%;
+    }
+}
+
+/* ======================================
+   📱 PERFECT MOBILE RESPONSIVE DESIGN
+====================================== */
+@media (max-width: 768px) {
+
+    /* Hide sidebar fully */
+    .sidebar {
+        display: none !important;
+    }
+
+    /* Main container becomes vertical */
+    .customer-main {
+        flex-direction: column;
+        padding: 0;
+        min-height: auto;
+    }
+
+    /* Content takes full width */
+    .customer-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Card full width with smooth padding */
+    .customer-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 18px !important;
+        border-radius: 14px;
+    }
+
+    /* Title smaller and centered spacing */
+    .customer-title {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+    /* Form fields tighter spacing */
+    .customer-form {
+        gap: 14px;
+    }
+
+    .customer-label {
+        font-size: 14px;
+        gap: 6px;
+    }
+
+    .customer-input {
+        padding: 11px 12px;
+        font-size: 14px;
+    }
+
+    /* Buttons stacked */
+    .customer-btn-group {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .customer-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+/* ======================================
+   📱 SMALL MOBILE (max-width: 480px)
+====================================== */
+@media (max-width: 480px) {
+
+    .customer-card {
+        padding: 15px !important;
+    }
+
+    .customer-title {
+        font-size: 20px;
+    }
+
+    .customer-input {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .customer-btn {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+
+
+}

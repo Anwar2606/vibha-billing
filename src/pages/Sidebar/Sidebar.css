@@ -1,0 +1,9 @@
+.sidebar ul li div {
+  padding: 10px 12px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.sidebar ul li div:hover {
+  background-color: #dce4f8;
+}

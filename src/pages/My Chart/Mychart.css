@@ -1,0 +1,55 @@
+.sales-chart-box {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 20px;
+  padding-bottom: 40px;
+  border-radius: 8px;
+}
+
+/* Title */
+.sales-chart-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1b2594;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Chart fixed height wrapper */
+.sales-chart-area {
+  width: 100%;
+  height: 280px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sales-chart-box {
+    width: 94%;
+    padding: 15px;
+  }
+
+  .sales-chart-title {
+    font-size: 18px;
+  }
+
+  .sales-chart-area {
+    height: 240px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sales-chart-box {
+    padding: 12px;
+    width: 95%;
+  }
+
+  .sales-chart-title {
+    font-size: 16px;
+  }
+
+  .sales-chart-area {
+    height: 220px;
+  }
+}

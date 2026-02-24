@@ -1,0 +1,51 @@
+sno,name,category,regularprice,saleprice,inStock,quantity,bill
+g001,2 3/4 Kuruvi,ONE SOUND,100,21,TRUE,100,Wholesale
+g002,3 1/2  Lakshmi,ONE SOUND,100,32,TRUE,100,Wholesale
+g003,"4"" Lakshmi",ONE SOUND,100,45,TRUE,100,Wholesale
+g004,"4"" Super Deluxe",ONE SOUND,100,75,TRUE,100,Wholesale
+g005,"4"" Gold Lakshmi",ONE SOUND,100,90,TRUE,100,Wholesale
+g006,"5"" Hulk",ONE SOUND,100,99,TRUE,100,Wholesale
+g007,2 Sound Cracker,ONE SOUND,100,85,TRUE,100,Wholesale
+g008,Bullet Bomb,DAMAL CRACKERS,100,80,TRUE,100,Wholesale
+g009,Classic Foils,DAMAL CRACKERS,100,300,TRUE,100,Wholesale
+g010,King of King Bomb,DAMAL CRACKERS,100,250,TRUE,100,Wholesale
+g011,Hydro Bomb,DAMAL CRACKERS,100,200,TRUE,100,Wholesale
+g012,Digital Bomb,DAMAL CRACKERS,100,700,TRUE,100,Wholesale
+g013,7cm Electric,SPARKLERS,100,35,TRUE,100,Wholesale
+g014,7cm Color,SPARKLERS,100,40,TRUE,100,Wholesale
+g015,10cm Electric,SPARKLERS,100,50,TRUE,100,Wholesale
+g016,10cm Color,SPARKLERS,100,54,TRUE,100,Wholesale
+g017,10cm Green,SPARKLERS,100,60,TRUE,100,Wholesale
+g018,10cm Red,SPARKLERS,100,68,TRUE,100,Wholesale
+g019,12cm Electric,SPARKLERS,100,55,TRUE,100,Wholesale
+g020,12cm Color,SPARKLERS,100,58,TRUE,100,Wholesale
+g021,12cm Green,SPARKLERS,100,63,TRUE,100,Wholesale
+g022,12cm Red,SPARKLERS,100,70,TRUE,100,Wholesale
+g023,15cm Electric,SPARKLERS,100,80,TRUE,100,Wholesale
+g024,15cm Color,SPARKLERS,100,85,TRUE,100,Wholesale
+g025,15cm Green,SPARKLERS,100,98,TRUE,100,Wholesale
+g026,15cm Red,SPARKLERS,100,105,TRUE,100,Wholesale
+g027,30cm Electric,SPARKLERS,100,105,TRUE,100,Wholesale
+g028,30cm Color,SPARKLERS,100,110,TRUE,100,Wholesale
+g029,30cm Green,SPARKLERS,100,130,TRUE,100,Wholesale
+g030,30cm Red,SPARKLERS,100,135,TRUE,100,Wholesale
+g031,50cm Electric,SPARKLERS,100,320,TRUE,100,Wholesale
+g032,50cm Color,SPARKLERS,100,360,TRUE,100,Wholesale
+g033,1 1/2 Twinkling Star,TWINKLING STARS,100,70,TRUE,100,Wholesale
+g034,"4"" Twinkling Star",TWINKLING STARS,100,162,TRUE,100,Wholesale
+g035,Dragon Fighter,TWINKLING STARS,100,160,TRUE,100,Wholesale
+g036,Sword Big,TWINKLING STARS,100,602,TRUE,100,Wholesale
+g037,Sword Small,TWINKLING STARS,100,300,TRUE,100,Wholesale
+g038,Red Bigili,BIGILI CRACKERS,100,78,TRUE,100,Wholesale
+g039,Stripped Bigili,BIGILI CRACKERS,100,87,TRUE,100,Wholesale
+g040,Flower Pots Big,FLOWER POTS,100,145,TRUE,100,Wholesale
+g041,Flower Pots Special,FLOWER POTS,100,162,TRUE,100,Wholesale
+g042,Flower Pots Ashoka,FLOWER POTS,100,225,TRUE,100,Wholesale
+g043,Flower Pots Color Kotti,FLOWER POTS,100,390,TRUE,100,Wholesale
+g044,Ground Chakkar Big (10pcs),CHAKKARS,100,90,TRUE,100,Wholesale
+g045,Ground Chakkar Special,CHAKKARS,100,167,TRUE,100,Wholesale
+g046,Ground Chakkar Deluxe,CHAKKARS,100,324,TRUE,100,Wholesale
+g047,Joker Spinner Special,SPINNERS,100,338,TRUE,100,Wholesale
+g048,Winwheel Mini,SPINNERS,100,383,TRUE,100,Wholesale
+g049,Winwheel Max,SPINNERS,100,467,TRUE,100,Wholesale
+g050,Discowheel,SPINNERS,100,225,TRUE,100,Wholesale

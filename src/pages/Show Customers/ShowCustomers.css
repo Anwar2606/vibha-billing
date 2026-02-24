@@ -1,0 +1,136 @@
+/* ================================
+   MAIN LAYOUT
+================================ */
+.main-container2 {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+    padding: 25px;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Add Customer Button */
+.add-customer-btn {
+    padding: 10px 20px;
+    background-color: #1b2594;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+/* Table Styles */
+.products-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.products-table th,
+.products-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ================================
+   📱 MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+    .main-container2 {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .content {
+        margin-left: 0 !important;
+        padding: 15px;
+    }
+
+    .header-row {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .add-customer-btn {
+        width: 100%;
+    }
+
+    /* Scrollable Table */
+    .products-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .edit-btn,
+    .delete-btn {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+
+
+}
+
+/* ================================
+   📱 VERY SMALL DEVICES (480px)
+================================ */
+
+@media (max-width: 480px) {
+    .all-bills-page h1 {
+        font-size: 20px;
+    }
+
+    .products-table th,
+    .products-table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}

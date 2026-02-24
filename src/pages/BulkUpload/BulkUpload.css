@@ -1,0 +1,194 @@
+/* Main page area next to sidebar */
+.mybulkuploadfiles {
+  flex: 1;
+  width: 100%;
+  max-width: 100%;
+  padding: 40px 50px;
+  /* perfect spacing */
+  background-color: #f1f4ff;
+  /* soft background */
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  /* center form horizontally */
+  align-items: flex-start;
+  /* top aligned */
+}
+
+/* White upload box */
+.mybulkupload-box {
+  width: 100%;
+  max-width: 650px;
+  background: #ffffff;
+  padding: 35px;
+  /* inner padding */
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* Title */
+.header {
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  /* space below heading */
+}
+
+/* File drop area */
+.file-drop-zone {
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  background-color: #fff;
+  transition: 0.3s ease;
+  margin-bottom: 20px;
+  /* spacing below */
+}
+
+.file-drop-zone.dragging {
+  background-color: #e8f0fe;
+  border-color: #007bff;
+}
+
+/* File name */
+.file-name {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Buttons container */
+.buttons {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  /* proper spacing between buttons */
+}
+
+/* Upload buttons */
+.btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #45a049;
+  transform: scale(1.03);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Progress bar */
+.progress-bar {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 18px;
+  background-color: #007bff;
+  border-radius: 8px;
+  width: 0;
+  transition: width 0.4s ease-in-out;
+}
+
+/* Error message box */
+.error-messages {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  color: #856404;
+}
+
+.error-messages h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+/* ======================================
+   📱 MOBILE RESPONSIVE 
+====================================== */
+@media (max-width: 768px) {
+
+  /* Main container */
+  .mybulkuploadfiles {
+    padding: 20px 15px;
+    /* smaller padding */
+    align-items: flex-start;
+  }
+
+  /* Upload card */
+  .mybulkupload-box {
+    max-width: 100%;
+    padding: 20px;
+    /* reduce padding for small screens */
+    border-radius: 10px;
+  }
+
+  /* Heading */
+  .header {
+    font-size: 1.4em;
+    margin-bottom: 16px;
+  }
+
+  /* File drop zone */
+  .file-drop-zone {
+    padding: 20px;
+    /* shrink padding */
+    font-size: 14px;
+  }
+
+  /* File dropped name */
+  .file-name {
+    font-size: 14px;
+  }
+
+  /* Buttons stack full width */
+  .buttons {
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    /* full-width button */
+    padding: 12px 14px;
+    font-size: 15px;
+  }
+
+  /* Progress bar */
+  .progress-bar {
+    margin-top: 16px;
+  }
+
+  .progress-bar-fill {
+    height: 14px;
+    /* thinner on mobile */
+  }
+
+  /* Error box */
+  .error-messages {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .error-messages h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+}
