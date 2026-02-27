@@ -9,8 +9,8 @@ import {
   Font,
 } from "@react-pdf/renderer";
 
-import logo from "../assets/vibha-logo.png";
-import watermark from "../assets/vibha-logo.png";
+import logo from "../assets/vibha-nw-logo.png";
+import watermark from "../assets/vibha-nw-logo.png";
 
 // ---------------- FONT REGISTER ----------------
 Font.register({
@@ -249,7 +249,11 @@ totalsLabel: {
 totalsValue: {
   fontFamily: "EnglishBold",
 },
-
+invoiceTitle: {
+  fontSize: 12,
+  fontFamily: "EnglishBold",
+  marginTop: 2,
+},
 grandTotalRow: {
   flexDirection: "row",
   justifyContent: "space-between",
@@ -287,7 +291,21 @@ bankValue: {
   fontSize: 10,
 },
 });
+const formatDate = (date) => {
+  if (!date) return "N/A";
 
+  const day = String(date.getDate()).padStart(2, "0");
+
+  const months = [
+    "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+  ];
+
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+
+  return `${day}-${month}-${year}`;
+};
 // ---------------- PDF ----------------
 const TamilPDF = ({
   invoiceNumber = 1,
@@ -301,7 +319,7 @@ const TamilPDF = ({
   customerGSTIN = "",
   customerEmail = "",
 
-  bankName = "Indian Bank",
+  bankName = "IDFC Bank",
   accountName = "VIBHA TRAINING AND CONSULTING",
   accountNumber = "10259086127",
   ifscCode = "IDFB0080591",
@@ -326,28 +344,33 @@ const TamilPDF = ({
           <View style={styles.header}>
             <View style={styles.headerLeft}>
               <Image src={logo} style={styles.logo} />
-              <Text style={styles.fssai}>Registration Number : {fssaiNo}</Text>
+              <Text style={styles.fssai}>GSTIN : {fssaiNo}</Text>
             </View>
 
             <View style={styles.headerCenter}>
-              <Text style={styles.shopTitle}>
-                VIBHA TRAINING AND CONSULTING
-              </Text>
+  <Text style={styles.shopTitle}>
+    VIBHA TRAINING AND CONSULTING
+  </Text>
 
-              <Text style={styles.address}>
-                Sri Lakshmi Complex, Omalur Main Rd, Swarnapuri, Salem,
-                {"\n"}Tamil Nadu 636004
-              </Text>
-            </View>
+ 
+
+  <Text style={styles.address}>
+    139/9, Bharathi Nagar, Arun Nagar Back Side
+    Alagapurampudur, Salem, Tamil Nadu - 636016
+     <Text style={styles.invoiceTitle}>
+    {"\n"}{"\n"}TAX INVOICE
+  </Text>
+  </Text>
+</View>
 
             <View style={styles.headerRight}>
-              <Text style={styles.phoneNo}>88079 89727</Text>
+             <Text style={styles.phoneNo}>Phone Number: 88079 89727</Text>
               <Text style={styles.billMeta}>
-                BILL NUMBER: {String(invoiceNumber).padStart(3, "0")}
+                Tax Invoice Number: {String(invoiceNumber).padStart(3, "0")}
               </Text>
 
               <Text style={styles.billMeta}>
-                Date: {billDate ? billDate.toLocaleDateString("en-GB") : "N/A"}
+                Date: {formatDate(billDate)}  
               </Text>
             </View>
           </View>
@@ -397,29 +420,40 @@ const TamilPDF = ({
 </View>
           {/* TABLE */}
           <View style={styles.tableBox}>
-            <View style={styles.tableHeader}>
-              <Text style={[styles.th, { width: "10%" }]}>S.No</Text>
-              <Text style={[styles.th, { width: "45%" }]}>Item</Text>
-              <Text style={[styles.th, { width: "15%" }]}>Qty</Text>
-              <Text style={[styles.th, { width: "15%" }]}>Rate</Text>
-              <Text style={[styles.th, { width: "15%", borderRight: 0 }]}>
-                Total
-              </Text>
-            </View>
+  <View style={styles.tableHeader}>
+    <Text style={[styles.th, { width: "8%" }]}>S.No</Text>
+    <Text style={[styles.th, { width: "37%" }]}>Item</Text>
+    <Text style={[styles.th, { width: "15%" }]}>HSN Code</Text>
+    <Text style={[styles.th, { width: "13%" }]}>Qty</Text>
+    <Text style={[styles.th, { width: "13%" }]}>Rate</Text>
+    <Text style={[styles.th, { width: "14%", borderRight: 0 }]}>
+      Taxable Amount
+    </Text>
+  </View>{cart.map((item, i) => (
+  <View key={i} style={styles.tr}>
+    <Text style={[styles.td, { width: "8%" }]}>{i + 1}</Text>
 
-            {cart.map((item, i) => (
-              <View key={i} style={styles.tr}>
-                <Text style={[styles.td, { width: "10%" }]}>{i + 1}</Text>
-                <Text style={[styles.td, { width: "45%" }]}>{item.name}</Text>
-                <Text style={[styles.td, { width: "15%" }]}>{item.quantity}</Text>
-                <Text style={[styles.td, { width: "15%" }]}>
-                  Rs. {item.saleprice}
-                </Text>
-                <Text style={[styles.td, { width: "15%", borderRight: 0 }]}>
-                  Rs. {(item.quantity * item.saleprice).toFixed(2)}
-                </Text>
-              </View>
-            ))}
+    <Text style={[styles.td, { width: "37%" }]}>
+      {item.name}
+    </Text>
+
+    <Text style={[styles.td, { width: "15%" }]}>
+      999293
+    </Text>
+
+    <Text style={[styles.td, { width: "13%" }]}>
+      {item.quantity}
+    </Text>
+
+    <Text style={[styles.td, { width: "13%" }]}>
+      Rs. {item.saleprice}
+    </Text>
+
+    <Text style={[styles.td, { width: "14%", borderRight: 0 }]}>
+      Rs. {(item.quantity * item.saleprice).toFixed(2)}
+    </Text>
+  </View>
+))}
 
        <View style={styles.totalsBox}>
 

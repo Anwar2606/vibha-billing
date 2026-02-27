@@ -11,7 +11,7 @@ import {
 import { AiFillProduct } from "react-icons/ai";
 import { MdLogout } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Logo from "../assets/PCW.png";
+import Logo from "../assets/vibha-logo.png";
 import "./BulkUpload.css";
 import { TbListNumbers } from "react-icons/tb";
 import { IoIosPerson } from "react-icons/io";

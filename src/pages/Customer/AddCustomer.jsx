@@ -6,7 +6,7 @@ import { FaHome, FaEye, FaEdit, FaFileInvoice, FaArrowCircleLeft, FaArrowAltCirc
 import { AiFillProduct } from "react-icons/ai";
 import { TbListNumbers } from "react-icons/tb";
 import { MdLogout } from "react-icons/md";
-import Logo from "../assets/PCW.png"; // Adjust the path as per your project
+import Logo from "../assets/vibha-logo.png"; // Adjust the path as per your project
 import { IoIosPerson } from "react-icons/io";
 import Sidebar from "../Sidebar/Sidebar";
 import './AddCustomer.css';
