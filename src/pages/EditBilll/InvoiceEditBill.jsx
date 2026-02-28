@@ -76,7 +76,7 @@ useEffect(() => {
 const handleEdit = (bill) => {
   setUpdatedDetails({ ...bill });
   setIsModalOpen(true);
-
+ const formattedDate = formatDateForInput(bill.createdAt);
   // Calculate initial totals
   const updatedProducts = bill.productsDetails.map((product) => ({
     ...product,
@@ -429,6 +429,19 @@ doc.rect(14, customerStartY - 2, 182, customerEndY - customerStartY + 2);
   doc.setFont('helvetica', 'bold');
   doc.text(authSig, authSigX, currentY);
 };
+
+function formatDateForInput(date) {
+  if (!date) return "";
+
+  const d = date.toDate ? date.toDate() : new Date(date);
+
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+
+  return `${year}-${month}-${day}`;
+}
+
   const handleRemoveProduct = (index) => {
     const updatedProducts = [...updatedDetails.productsDetails];
   
@@ -651,7 +664,13 @@ const handleFastDownload = async (bill) => {
   value={updatedDetails.customerGSTIN || ""}
   onChange={(e) => handleInputChange(e)}
 />
-
+<label>Bill Date:</label>
+<input
+  type="date"
+  name="createdAt"
+  value={updatedDetails.createdAt || ""}
+  onChange={(e) => handleInputChange(e)}
+/>
                   <h3>Products in Bill</h3>
                   {updatedDetails.productsDetails.map((product, index) => (
                   <div key={index} className="product-block">
